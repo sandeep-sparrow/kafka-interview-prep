@@ -1,0 +1,33 @@
+{
+  "$schema": "/mediawiki/recentchange/1.0.0",
+  "meta": {
+    "uri": "https://www.wikidata.org/wiki/Q17479499",
+    "request_id": "de206c45-6fd3-4f75-b456-3d109fe7a910",
+    "id": "6e43316b-b081-4b2d-b0ca-932f7a1de9f5",
+    "dt": "2024-03-01T17:30:20Z",
+    "domain": "www.wikidata.org",
+    "stream": "mediawiki.recentchange",
+    "topic": "codfw.mediawiki.recentchange",
+    "partition": 0,
+    "offset": 1072676406
+  },
+  "id": 2154532553,
+  "type": "edit",
+  "namespace": 0,
+  "title": "Q17479499",
+  "title_url": "https://www.wikidata.org/wiki/Q17479499",
+  "comment": "/* wbsetreference-add:2| */ [[Property:P27]]: [[Q668]], BOT - Adding 1 reference",
+  "timestamp": 1709314220,
+  "user": "Emijrpbot",
+  "bot": true,
+  "notify_url": "https://www.wikidata.org/w/index.php?diff=2091170277&oldid=2091170022&rcid=2154532553",
+  "minor": false,
+  "patrolled": true,
+  "length": { "old": 15867, "new": 16317 },
+  "revision": { "old": 2091170022, "new": 2091170277 },
+  "server_url": "https://www.wikidata.org",
+  "server_name": "www.wikidata.org",
+  "server_script_path": "/w",
+  "wiki": "wikidatawiki",
+  "parsedcomment": "‎<span dir=\"auto\"><span class=\"autocomment\">Added reference to claim: </span></span> <a href=\"/wiki/Property:P27\" title=\"‎country of citizenship‎ | ‎the object is a country that recognizes the subject as its citizen‎\"><span class=\"wb-itemlink\"><span class=\"wb-itemlink-label\" lang=\"en\" dir=\"ltr\">country of citizenship</span> <span class=\"wb-itemlink-id\">(P27)</span></span></a>: <a href=\"/wiki/Q668\" title=\"‎India‎ | ‎country in South Asia‎\"><span class=\"wb-itemlink\"><span class=\"wb-itemlink-label\" lang=\"en\" dir=\"ltr\">India</span> <span class=\"wb-itemlink-id\">(Q668)</span></span></a>, BOT - Adding 1 reference"
+}
