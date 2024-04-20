@@ -14,7 +14,6 @@ import lombok.NoArgsConstructor;
 public class Book {
 
     @Id
-    @GeneratedValue
     private Integer bookId;
 
     private String bookName;
