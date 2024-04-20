@@ -5,9 +5,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.apache.kafka.common.errors.ResourceNotFoundException;
 import org.learnkafka.Entity.LibraryEvent;
 import org.learnkafka.jpa.LibraryEventsRepository;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 @Slf4j
@@ -29,10 +32,26 @@ public class LibraryEventService {
                 break;
             case UPDATE:
                 // UPDATE OPERATION
+                // Validate library Event
+                // Save
+                validate(libraryEvent);
+                save(libraryEvent);
                 break;
             default:
                 log.info("Invalid Library Event Type");
         }
+    }
+
+    private void validate(LibraryEvent libraryEvent) {
+        if(libraryEvent.getLibraryEventId() == null){
+            throw new IllegalArgumentException("Library Event is missing!");
+        }
+        // check if the library event exists or not
+        Optional<LibraryEvent> libraryEventOptional = libraryEventsRepository.findById(libraryEvent.getLibraryEventId());
+        if(libraryEventOptional.isEmpty()){
+            throw new ResourceNotFoundException("Not a valid library Id");
+        }
+        log.info("Validation is success for the library event: {} ", libraryEventOptional.get());
     }
 
     private void save(LibraryEvent libraryEvent) {
